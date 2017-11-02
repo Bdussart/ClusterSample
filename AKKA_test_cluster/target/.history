@@ -1,0 +1,35 @@
+exit
+run src\scala\ClusterChild 25
+run src\scala\ClusterChild 25 13 13 2
+run
+run ClusterChild
+run 1
+show discoveredMainClasses
+runMain
+runMain src/scala/ClusterChild
+runMain src/scala/ClusterChild 2569 13 13 1
+runMain src/main/scala/ClusterChild 2569 13 13 1
+runMain ClusterChild 2569 13 13 1
+runMain 
+runMain ClusterChild 2580 13 "plop" 2
+compile
+run
+run 2570 13 "13" 2
+runMain ClusterChild 
+runMain ClusterChild "11" "11" "11" "1"
+runMain ClusterChild 11 11 11 11
+runMain ClusterChild "11" "11" "11" "11"
+runMain ClusterChild "2579" "11" "11" "11"
+run
+runMain ClusterChild "2579" "11" "11" "11"
+reload
+clean
+compile
+run -feature
+runMain ClusterChild "2579" "11" "11" "11"
+clean
+update
+runMain ClusterChild "2579" "11" "11" "11"
+runMain ClusterChild "2579" "8" "11" "11"
+runMain ClusterChild "2580" "8" "11" "11"
+sbt "runMain ClusterChild 8080 1 11 11"
